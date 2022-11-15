@@ -56,10 +56,10 @@ class Tablero {
      for (int i=0; i<cantCasillas; i++) {
       for (int j=0; j<cantCasillas; j++) { 
         if (casillas[posX2][posY2].hayBomba(posX2, posY2)) {
-          casillas[posX2][posY2].perdiste();
-          casillas[posX2][posY2].mostrar(i, j);
+          casillas[i][j].perdiste();
+
         } else {
-          casillas[posX2][posY2].mostrar(i, j);
+          casillas[posX2][posY2].mostrar(i, j, posX2, posY2);
          
         }
       }

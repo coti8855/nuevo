@@ -115,11 +115,18 @@ class Casilla {
     }
   } 
 
-  void mostrar(int i, int j) {
+  void mostrar(int i, int j, int posX, int posY) { 
     image(imagen1, (i* tam)+15, (j * tam)+100, tam, tam);
+    if(posX == posXBomba+1 && posY == posYBomba) {
+    image(imagen2, (posX* tam)+15, (posY * tam)+100, tam, tam);
+    }else{
+      image(imagen1, (i* tam)+15, (j * tam)+100, tam, tam);
+    }
   }
 
-  void perdiste() {    
+  void perdiste() { 
     image(imagen2, (posXBomba * tam)+15, (posYBomba * tam)+100, tam, tam);
+    image(imagen1, (posX* tam)+15, (posY * tam)+100, tam, tam);
+    
   }
 }
